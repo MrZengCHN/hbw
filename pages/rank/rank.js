@@ -1,58 +1,66 @@
-// pages/forum/forum.js
+// pages/rank/rank.js
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    forumAndComments: {}
+
   },
-  showForumContentBtn: function (e) {
-    var forumId = e.currentTarget.id;
-    wx.navigateTo({
-      url: '/pages/forum-content/forum-content?id=' + forumId
-    })
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+      
   },
-  onLoad: function () {
-    if (getApp().globalData.user.userCredit >= 90) {
-      wx.setNavigationBarTitle({ title: '借阅伴侣+' });
-    }
-    var that = this;
-    wx.request({
-      url: getApp().globalData.url + "api-forum-all",
-      data: {},
-      method: 'GET',
-      success: function (res) {
-        var data = res.data;
-        for (var i = 0; i < data.length; ++i) {
-          data[i].forum.forumTime = new Date(data[i].forum.forumTime);
-          var mydate = data[i].forum.forumTime.getFullYear() + "-" + (data[i].forum.forumTime.getMonth() + 1) + "-" + data[i].forum.forumTime.getDate();
-          data[i].forum.forumTime = mydate;
-        }
-        that.setData({ forumAndComments: res.data });
-      }
-    })
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
   },
-  showBookDetailBtn: function (e) {
-    var bookId = e.currentTarget.id;
-    wx.navigateTo({
-      url: '/pages/book-detail/book-detail?scanCode=0&id=' + bookId 
-    })
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+
   },
-  onPullDownRefresh: function() {
-    wx.showNavigationBarLoading();
-    var that = this;
-    wx.request({
-      url: getApp().globalData.url + "api-forum-all",
-      data: {},
-      method: 'GET',
-      success: function (res) {
-        var data = res.data;
-        for (var i = 0; i < data.length; ++i) {
-          data[i].forum.forumTime = new Date(data[i].forum.forumTime);
-          var mydate = data[i].forum.forumTime.getFullYear() + "-" + (data[i].forum.forumTime.getMonth() + 1) + "-" + data[i].forum.forumTime.getDate();
-          data[i].forum.forumTime = mydate;
-        }
-        that.setData({ forumAndComments: res.data });
-      }
-    })
-    wx.stopPullDownRefresh();
-    wx.hideNavigationBarLoading();
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {
+
   },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
+  }
 })

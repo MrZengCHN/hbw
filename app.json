@@ -6,12 +6,12 @@
     "pages/log/log",
     "pages/day/day",
     "pages/book/book",
-    "pages/rank/rank",
     "pages/login/login",
     "pages/review/review",
     "pages/book/bookInfo",
     "pages/user/about",
-    "pages/user/userInfo"
+    "pages/user/userInfo",
+    "pages/rank/rank"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -9,11 +9,16 @@
           <text class="classify">分类: {{item.type}}</text>
           <text class="press">出版社: {{hotBookList[0].bookPress}}</text>
           <view class="grade">评分:
-            <image src="/static/images/book/star_1.png" />
-            <image src="/static/images/book/star_1.png" />
-            <image src="/static/images/book/star_1.png" />
-            <image src="/static/images/book/star_1.png" />
-            <image src="/static/images/book/star_0.png" /> {{item.appreciateTimes/100}}
+            <image wx:if="{{item.score>2}}" src="/static/images/book/star_1.png" />
+            <image wx:else="" src="/static/images/book/star_0.png" mode=""/>
+            <image wx:if="{{item.score>4}}" src="/static/images/book/star_1.png" />
+            <image wx:else="" src="/static/images/book/star_0.png" mode=""/>
+            <image wx:if="{{item.score>6}}" src="/static/images/book/star_1.png" />
+            <image wx:else="" src="/static/images/book/star_0.png" mode=""/>
+            <image wx:if="{{item.score>8}}" src="/static/images/book/star_1.png" />
+            <image wx:else="" src="/static/images/book/star_0.png" mode=""/>
+            <image wx:if="{{item.score>10}}" src="/static/images/book/star_1.png" />
+            <image wx:else="" src="/static/images/book/star_0.png" mode=""/> {{item.score}}
           </view>
         </view>
 </view>

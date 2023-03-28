@@ -8,8 +8,14 @@
   display: flex;
   align-items: center;
 }
-.header text{
-  margin-left: 30rpx;
+.header .bookBaseInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+} 
+.bookBaseInfo text{
+  margin-left: 50rpx;
+  margin-top: 20rpx;
 }
 image{
   width: 200rpx;
@@ -22,4 +28,9 @@ image{
   padding: 5rpx;
   background-color: rgba(0, 128, 128, 0.2);
   border-radius: 10rpx;
+}
+.Js{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
 }

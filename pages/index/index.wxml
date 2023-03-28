@@ -16,21 +16,15 @@
 <!-- 圈导航 -->
 <view class="navContainer">
   <view class="navItem">
-  <navigator url="../day/day">
-    <text class="iconfont icon-tuijian"></text>
-  </navigator>
+    <text bindtap="toDay" class="iconfont icon-xin"></text>
     <text>新书榜</text>
   </view>
   <view class="navItem">
-    <navigator url="../book/book">
-    <text class="iconfont icon-shujiashugui"></text>
-    </navigator>
+    <text bindtap="toBook" class="iconfont icon-shujiashugui"></text>
     <text>书库</text>
   </view>
   <view class="navItem">
-    <navigator url="../rank/rank">
-    <text class="iconfont icon-paihangbang"></text>
-    </navigator>
+    <text bindtap="toRank" class="iconfont icon-paihangbang"></text>
     <text>排行榜</text>
   </view>
 </view>
@@ -41,27 +35,26 @@
       <text>每日推荐</text>
     </view>
   </view>
-  <scroll-view class="recommendScroll" enable-flex="true" scroll-x >
+  <scroll-view class="recommendScroll" enable-flex="true" scroll-x>
     <navigator url="../review/review">
-    <view class="card"  bindtap="bookDetailBtn" wx:key="id">
+      <view class="card" bindtap="bookDetailBtn" wx:key="id">
         <view class="user-row">
-         
-            <view class="user">徐徐道来：</view>
+
+          <view class="user">徐徐道来：</view>
         </view>
-        <view class="title-row">解别人的忧，却填了内心的洞</view>
         <view class="content-row">
           {{bookList[0].info}}
         </view>
         <view class="book-row" catchtap="showBookDetailBtn" id="{{forumAndComment.forum.book.bookId}}">
           <image data-book="{{bookList[0]}}" bindtap="toBookInfo" wx:if="{{bookList[0].firstImagePath}}" src="{{host}}{{bookList[0].firstImagePath}}" />
-            <view class="left">
-                <text class="title">{{forumAndComment.forum.book.bookName}}</text>
-                <text class="author">作者: {{bookList[0].name}}</text>
+          <view class="left">
+            <text class="title">{{forumAndComment.forum.book.bookName}}</text>
+            <text class="author">作者: {{bookList[0].name}}</text>
 
-            </view>
+          </view>
         </view>
-        <view class="comment-row">{{bookList[0].data-type}},点赞数 {{bookList[0].appreciateTimes}}</view>
-    </view>
-</navigator>
+        <view class="comment-row">{{bookList[0].type}},点赞数 {{bookList[0].appreciateTimes}}</view>
+      </view>
+    </navigator>
   </scroll-view>
 </view>

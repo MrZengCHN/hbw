@@ -1,5 +1,8 @@
 // js
 
+import config from "../../utils/config";
+import request from "../../utils/request";
+
 // 假数据
 let List = [
 	{
@@ -100,14 +103,33 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		List : List,
+    host:config.host,
+		List : {},
 		selectLeftId : null,
 		selectRightId : null,
 		currentIndex_L : null,
 		currentIndex_R : null,
 		scrollTop : 0
 	},
-	
+	onLoad:function(){
+    request("/wechat/type/all",null,"GET").then((res)=>{
+      this.setData({
+        List:res.types
+      })
+    })
+    this.setData({
+			currentIndex_L:0,
+			currentIndex_R : null,
+			selectLeftId : null,
+			selectRightId : null,
+			scrollTop : 0,
+		}) 
+  },
+  toBookInfo(e){
+    wx.navigateTo({
+      url: '/pages/book/bookInfo?book='+JSON.stringify(e.currentTarget.dataset.book),
+    })
+  },
 	/**
 	 * 左导航点击事件
 	 */
@@ -116,7 +138,7 @@ Page({
 		this.setData({
 			currentIndex_L:index,
 			currentIndex_R : null,
-			selectLeftId : this.data.List[index].LeftId,
+			selectLeftId : this.data.List[index].id,
 			selectRightId : null,
 			scrollTop : 0,
 		}) 
@@ -130,7 +152,7 @@ Page({
 		let index_L = this.data.currentIndex_L;
 		this.setData({
 			currentIndex_R : index,
-			selectRightId : this.data.List[index_L].RightList[index].RightId,
+			selectRightId : this.data.List[index_L].books[index].id,
 		}) 
 	},
 

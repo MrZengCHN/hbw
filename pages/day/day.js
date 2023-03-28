@@ -8,16 +8,16 @@ Page({
      * 页面的初始数据
      */
     data: {
-        bookList : {},
-        host:''
+        typeList : {},
+        host:config.host
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-      request("/wechat/book/recommend",null,"GET").then((res)=>{
+      request("/wechat/type/recentlyGroupByType",null,"GET").then((res)=>{
         this.setData({
-          bookList:res.books,
+          typeList:res.types,
           host:config.host
         })
       })

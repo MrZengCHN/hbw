@@ -1,12 +1,16 @@
 <!--pages/book/bookInfo.wxml-->
 <view class="bookInfoContainer">
   <view class="header">
-    <image src="{{host}}{{book.firstImagePath}}" mode=""/>
-    <text>{{book.name}}</text>
-    <text>获赞 {{book.appreciateTimes}}</text>
+    <image wx:if="{{book.firstImagePath}}" src="{{host}}{{book.firstImagePath}}" />
+    <view class="bookBaseInfo">
+      <text>{{book.name}}</text>
+      <text>{{book.appreciateTimes}}人赞过</text>
+      <text>评分 {{book.score}}</text>
+    </view>
   </view>
+ <text class="Js">图书介绍：</text>
   <view class="bookInfoTextContainer">
-    <text>{{book.info}}</text>
+    <text user-select>{{book.info}}</text>
   </view>
 </view>
 

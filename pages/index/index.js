@@ -4,73 +4,85 @@ import config from '../../utils/config'
 
 Page({
 
-    /**
-     * 页面的初始数据
-     */
-    data: {
-        bookList : {},
-        host:''
-    },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
-      request("/wechat/book/recommend",null,"GET").then((res)=>{
-        this.setData({
-          bookList:res.books,
-          host:config.host
-        })
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    bookList: {},
+    host: ''
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  toBook() {
+    wx.navigateTo({
+      url: '/pages/book/book',
+    })
+  },
+  toRank() {
+    wx.navigateTo({
+      url: '/pages/rank/rank',
+    })
+  },
+  toDay(){
+    wx.navigateTo({
+      url: '/pages/day/day',
+    })
+  },
+  onLoad(options) {
+    request("/wechat/book/recommend", null, "GET").then((res) => {
+      this.setData({
+        bookList: res.books,
+        host: config.host
       })
-    },
-    toBookInfo(e){
-      wx.navigateTo({
-        url: '/pages/book/bookInfo?book='+JSON.stringify(e.currentTarget.dataset.book),
-      })
-    },
+    })
+  },
+  toBookInfo(e) {
+    wx.navigateTo({
+      url: '/pages/book/bookInfo?book=' + JSON.stringify(e.currentTarget.dataset.book),
+    })
+  },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-      
-    },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-    },
+  },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-    },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {},
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-    },
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {},
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {},
 
-    },
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
 
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
+  },
 
-    },
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
 
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
+  },
 
-    }
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
+  }
 })

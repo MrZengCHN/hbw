@@ -20,13 +20,14 @@ page{
 
 .nav-left{
   display: inline-block;  
-  width: 45%;  
+  width: 30%;  
   height: 105vh;  
   background: rgba(255, 255, 255, 1);  
   text-align: left;  
 } 
 
 .nav-left-item{
+  text-align: center;
   display: flex;
   align-items: center;
   background: rgba(240, 242, 246, 1);
@@ -41,7 +42,6 @@ page{
 } 
 
 .nav-left-item-txt {
-  margin-left: 40rpx;
   color: rgba(51, 51, 51, 1);
   line-height: 70rpx;   
   padding: 16rpx;     
@@ -74,7 +74,7 @@ page{
 
 .nav-right-item-txt {
   width: 300rpx;
-  margin-left: 40rpx;
+  margin-left: 20rpx;
   color: rgba(51, 51, 51, 1);
   line-height: 70rpx;   
   padding: 16rpx;     
@@ -119,4 +119,9 @@ page{
   justify-content: center;
   align-items: center;
   margin: 44rpx auto;
+}
+
+.smallImage{
+  height: 40rpx;
+  width: 40rpx;
 }
