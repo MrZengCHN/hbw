@@ -1,0 +1,68 @@
+<!--pages/day/day.wxml-->
+
+<!--  1 -->
+
+      <!--热门卡片1-->
+
+<!--  2-->
+<view class="new-card" >
+        <view class="tag" >新书</view>
+        <view class="title">—— 近期上新小说 ——</view>
+        <view class="bookImg">
+          <image src="http:{{newBookList[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[0].bookId}}"/>
+          <image src="http:{{newBookList[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[1].bookId}}"/>
+          <image src="http:{{newBookList[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[2].bookId}}"/>
+        </view>
+      </view>
+<!--  2-->
+<view class="new-card" >
+        <view class="tag">新书</view>
+        <view class="title">—— 近期上新期刊 ——</view>
+        <view class="bookImg">
+          <image src="http:{{newBookList[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[0].bookId}}"/>
+          <image src="http:{{newBookList[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[1].bookId}}"/>
+          <image src="http:{{newBookList[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[2].bookId}}"/>
+        </view>
+      </view>
+
+
+      <view class="new-card" >
+        <view class="tag">新书</view>
+        <view class="title">—— 近期上新新闻 ——</view>
+        <view class="bookImg">
+          <image src="http:{{newBookList[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[0].bookId}}"/>
+          <image src="http:{{newBookList[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[1].bookId}}"/>
+          <image src="http:{{newBookList[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[2].bookId}}"/>
+        </view>
+      </view>
+
+
+      <view class="new-card" >
+        <view class="tag">新书</view>
+        <view class="title">—— 近期上新黄色小说 ——</view>
+        <view class="bookImg">
+          <image src="http:{{newBookList[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[0].bookId}}"/>
+          <image src="http:{{newBookList[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[1].bookId}}"/>
+          <image src="http:{{newBookList[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[2].bookId}}"/>
+        </view>
+      </view>
+      <view class="new-card" >
+        <view class="tag">新书</view>
+        <view class="title">—— 近期上新图书 ——</view>
+        <view class="bookImg">
+          <image src="http:{{newBookList[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[0].bookId}}"/>
+          <image src="http:{{newBookList[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[1].bookId}}"/>
+          <image src="http:{{newBookList[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{newBookList[2].bookId}}"/>
+        </view>
+      </view>
+
+
+
+
+
+
+
+
+
+
+

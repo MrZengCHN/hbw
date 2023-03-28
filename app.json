@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/index",
+    "pages/types/index",
+    "pages/log/log",
+    "pages/day/day",
+    "pages/book/book",
+    "pages/rank/rank",
+    "pages/login/login",
+    "pages/review/review",
+    "pages/book/bookInfo",
+    "pages/user/about",
+    "pages/user/userInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00b5ad",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/首页.png",
+        "selectedIconPath": "/static/images/首页active.png"
+      },
+      {
+        "pagePath": "pages/types/index",
+        "text": "分类",
+        "iconPath": "/static/images/分类.png",
+        "selectedIconPath": "/static/images/分类active.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "个人中心",
+        "iconPath": "/static/images/个人中心.png",
+        "selectedIconPath": "/static/images/个人中心active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

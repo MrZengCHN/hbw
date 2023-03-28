@@ -1,0 +1,12 @@
+<!--pages/book/bookInfo.wxml-->
+<view class="bookInfoContainer">
+  <view class="header">
+    <image src="{{host}}{{book.firstImagePath}}" mode=""/>
+    <text>{{book.name}}</text>
+    <text>获赞 {{book.appreciateTimes}}</text>
+  </view>
+  <view class="bookInfoTextContainer">
+    <text>{{book.info}}</text>
+  </view>
+</view>
+

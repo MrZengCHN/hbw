@@ -1,0 +1,6 @@
+/* pages/user/about.wxss */
+.aboutContainer{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}

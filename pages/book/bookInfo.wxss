@@ -1,0 +1,25 @@
+/* pages/book/bookInfo.wxss */
+.bookInfoContainer{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.bookInfoContainer .header{
+  display: flex;
+  align-items: center;
+}
+.header text{
+  margin-left: 30rpx;
+}
+image{
+  width: 200rpx;
+  height: 200rpx;
+  border: 10rpx solid rgba(0, 128, 128, 0.4);
+  border-radius: 20rpx;
+}
+.bookInfoTextContainer{
+  margin-top: 20rpx;
+  padding: 5rpx;
+  background-color: rgba(0, 128, 128, 0.2);
+  border-radius: 10rpx;
+}

@@ -1,0 +1,14 @@
+<view class="userInfoContainer">
+  <view class="item">
+    修改用户信息
+  </view>
+  <view class="item">
+    联系客服
+  </view>
+  <view class="item" bindtap="toAboutPage">
+    关于小程序
+  </view>
+  <view class="item" bindtap="logout">
+    退出登录
+  </view>
+</view>
